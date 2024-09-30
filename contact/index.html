@@ -1,0 +1,73 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Stattic</title>
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet" rel="preload" />
+    
+        <link rel="stylesheet" href="/assets/css/main.min.css">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/css/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic Site</a></h2>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<h1 class="text-6xl font-bold mb-8 pb-8 text-links quicksand-700 border-b border-primary">Contact Us</h1>
+<div class="stattic-content prose dark:prose-dark">
+    <h2>Get in Touch with Us</h2>
+<p>We’d love to hear from you! Whether you have questions about Stattic, feedback, or need support, feel free to reach out.</p>
+<h3>Direct Email</h3>
+<p>If you prefer, you can email us directly at:</p>
+<p><strong>Email</strong>: support@stattic.site</p>
+<p>We typically respond within 1-2 business days.</p>
+<h3>Support and Community</h3>
+<p>If you're looking for more immediate support or want to engage with the Stattic community, you can check out:</p>
+<ul>
+<li><a href="https://github.com/getstattic/stattic/issues">GitHub Issues</a>: For bug reports or feature requests.</li>
+</ul>
+<h3>Follow Us</h3>
+<p>Stay updated with our latest news and developments:</p>
+<ul>
+<li><strong>Twitter</strong>: <a href="https://twitter.com/getstattic">@getStattic</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/getstattic/stattic">Stattic Repository</a></li>
+</ul>
+<p>We look forward to hearing from you!</p> <!-- Allows Markdown content to be rendered as HTML -->
+</div>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>

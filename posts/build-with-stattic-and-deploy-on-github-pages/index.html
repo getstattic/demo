@@ -1,0 +1,175 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build and Deploy Your Website with Stattic and GitHub Pages | Stattic</title>
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet" rel="preload" />
+    
+        <link rel="stylesheet" href="/assets/css/main.min.css">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/css/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic Site</a></h2>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">How to Build and Deploy Your Website with Stattic and GitHub Pages</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2024-09-27</span> &middot; <span class="author">Unknown</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a>{:target="_blank"} for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository, and automate your workflow to push updates live.</p>
+<h2>Prerequisites</h2>
+<p>Before we start, make sure you have the following:</p>
+<ul>
+<li><strong>GitHub Account</strong>: <a href="https://github.com/">Sign up</a>{:target="_blank"} if you don't have one.</li>
+<li><strong>Git Installed</strong>: You can download and install Git from <a href="https://git-scm.com/downloads">here</a>{:target="_blank"}.</li>
+<li><strong>Stattic Installed</strong>: Make sure you have Stattic set up on your machine. If not, follow the installation instructions.</li>
+</ul>
+<hr />
+<h2>Step 1: Build Your Site with Stattic</h2>
+<p>First, generate your site's content using Stattic.</p>
+<ol>
+<li>
+<p><strong>Create Your Site Content</strong></p>
+<ul>
+<li>Add Markdown files to the <code>content/posts/</code> folder for blog posts.</li>
+<li>Add Markdown files to the <code>content/pages/</code> folder for static pages like About or Contact.</li>
+<li>
+<p><strong>Customize Your Site</strong></p>
+</li>
+<li>
+<p>Modify the templates in the <code>templates/</code> folder for custom layouts.</p>
+</li>
+<li>Customize your styles in <code>assets/css/stattic.css</code>.</li>
+<li><strong>Run the Build Command</strong></li>
+</ul>
+<p>In your terminal, navigate to your project folder and run:</p>
+<p><code>python3 stattic.py --output ./build --fonts "Quicksand"</code></p>
+<p>This command generates the static files in the <code>./build</code> directory. You can also pass a font list with the <code>--fonts</code>option to use fonts from Google Fonts. If you don't specify a font, it defaults to Quicksand.</p>
+</li>
+</ol>
+<hr />
+<h2>Step 2: Set Up a GitHub Repository</h2>
+<ol>
+<li>
+<p><strong>Create a New GitHub Repository</strong></p>
+<ul>
+<li>Go to <a href="https://github.com/">GitHub</a>{:target="_blank"} and create a new repository. Name it <code>your-username.github.io</code> if you want to use <a href="https://pages.github.com/">GitHub Pages</a>{:target="_blank"} (replace <code>your-username</code> with your actual GitHub username).</li>
+</ul>
+</li>
+<li>
+<p><strong>Clone the Repository Locally</strong> - Open your terminal, navigate to the directory where you want to clone your repository, and run:</p>
+<p><code>git clone https://github.com/your-username/your-repo-name.git</code></p>
+<p>Replace <code>your-username/your-repo-name</code> with your GitHub username and repository name.</p>
+</li>
+</ol>
+<hr />
+<h2>Step 3: Copy Your Build Files to the Repo</h2>
+<ol>
+<li>
+<p><strong>Move Your Build Files</strong> - After running the build command, copy the contents of the <code>./build</code> directory into your GitHub repository:</p>
+<p><code>cp -r build/* your-repo-name/</code></p>
+</li>
+<li>
+<p><strong>Navigate to the Repository Folder</strong> - Navigate into your repository directory:</p>
+<p><code>cd your-repo-name</code></p>
+</li>
+</ol>
+<hr />
+<h2>Step 4: Push Your Site to GitHub Pages</h2>
+<ol>
+<li>
+<p><strong>Stage and Commit the Files</strong> - Add the files to your Git repository:</p>
+<p><code>git add .</code></p>
+<p>Then commit them:</p>
+<p><code>git commit -m "Initial commit for static site"</code></p>
+</li>
+<li>
+<p><strong>Push to GitHub</strong> - Push the changes to your GitHub repository:</p>
+<p><code>git push origin main</code></p>
+</li>
+</ol>
+<hr />
+<h2>Step 5: Enable GitHub Pages</h2>
+<ol>
+<li>
+<p><strong>Configure GitHub Pages</strong> - Go to your GitHub repository, click on the <strong>Settings</strong> tab, then scroll down to <strong>GitHub Pages</strong>.</p>
+<ul>
+<li>Under <strong>Source</strong>, select <code>main</code> as the branch and choose <code>/ (root)</code> as the directory.</li>
+<li>Click <strong>Save</strong>.</li>
+<li><strong>Access Your Site</strong> - After a few minutes, your site will be live at <code>https://your-username.github.io/</code>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>Step 6: Automate Future Builds</h2>
+<p>Whenever you update your content, rebuilding and deploying the site is quick and easy.</p>
+<ol>
+<li>
+<p><strong>Rebuild Your Site</strong> - After adding new posts or making changes, run the build command again:</p>
+<p><code>python3 stattic.py --output ./build --fonts "Quicksand"</code></p>
+</li>
+<li>
+<p><strong>Copy and Push the New Build</strong> - Copy the updated files to your GitHub repository:</p>
+<p><code>cp -r build/* your-repo-name/</code></p>
+<p>Navigate to the repository:</p>
+<p><code>cd your-repo-name</code></p>
+<p>Then, add, commit, and push the changes:</p>
+<p><code>git add .
+git commit -m "Updated content"
+git push origin main</code></p>
+</li>
+<li>
+<p><strong>GitHub Pages Auto-Update</strong> - GitHub Pages will automatically rebuild your site, and your updates will go live.</p>
+</li>
+</ol>
+<hr />
+<p>Using Stattic with <a href="https://pages.github.com/">GitHub Pages</a>{:target="_blank"} is a fast and efficient way to manage and host static websites. You can:</p>
+<ul>
+<li>Generate optimized static files with Stattic.</li>
+<li>Use GitHub Pages for free, easy hosting.</li>
+<li>Automate your updates with Git's simple push commands.</li>
+</ul>
+<p>With no databases and minimal setup, you can enjoy a streamlined and secure static site. It's fast, secure, and lightweight---perfect for blogging, portfolios, documentation, and more.</p>
+<hr />
+<h3><strong>Happy Building with Stattic!</strong></h3> <!-- Allows rendered Markdown HTML to be injected safely -->
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>
