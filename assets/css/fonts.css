@@ -1,65 +1,50 @@
 
-@font-face {
-  font-family: 'Quicksand-300';  /* Unique font family for each weight */
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('../fonts/quicksand-300.ttf') format('truetype');
-}
-
-.quicksand-300 {
-  font-family: 'Quicksand-300', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'Quicksand-400';  /* Unique font family for each weight */
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/quicksand-400.ttf') format('truetype');
-}
-
-.quicksand-400 {
-  font-family: 'Quicksand-400', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Quicksand-500';  /* Unique font family for each weight */
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('../fonts/quicksand-500.ttf') format('truetype');
-}
-
-.quicksand-500 {
-  font-family: 'Quicksand-500', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Quicksand-600';  /* Unique font family for each weight */
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/quicksand-600.ttf') format('truetype');
-}
-
-.quicksand-600 {
-  font-family: 'Quicksand-600', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Quicksand-700';  /* Unique font family for each weight */
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('../fonts/quicksand-700.ttf') format('truetype');
-}
-
-.quicksand-700 {
-  font-family: 'Quicksand-700', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 700;
-}
+        @font-face {
+        font-family: 'Quicksand';  /* Common font family for all weights */
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url('../fonts/quicksand-300.woff2') format('woff2'), 
+            url('../fonts/quicksand-300.ttf') format('truetype');
+        }
+        
+        @font-face {
+        font-family: 'Quicksand';  /* Common font family for all weights */
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('../fonts/quicksand-400.woff2') format('woff2'), 
+            url('../fonts/quicksand-400.ttf') format('truetype');
+        }
+        
+        @font-face {
+        font-family: 'Quicksand';  /* Common font family for all weights */
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('../fonts/quicksand-500.woff2') format('woff2'), 
+            url('../fonts/quicksand-500.ttf') format('truetype');
+        }
+        
+        @font-face {
+        font-family: 'Quicksand';  /* Common font family for all weights */
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('../fonts/quicksand-600.woff2') format('woff2'), 
+            url('../fonts/quicksand-600.ttf') format('truetype');
+        }
+        
+        @font-face {
+        font-family: 'Quicksand';  /* Common font family for all weights */
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('../fonts/quicksand-700.woff2') format('woff2'), 
+            url('../fonts/quicksand-700.ttf') format('truetype');
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;  /* Apply downloaded font to body */
+        }
+        
