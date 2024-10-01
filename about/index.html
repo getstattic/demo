@@ -9,9 +9,14 @@
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert">
   
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet" rel="preload" media="print" onload="this.media='all'">
+    <!-- Preload tailwind.min.css and apply once loaded -->
+    <link href="/assets/css/tailwind.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/tailwind.min.css"></noscript>
+
+    <!-- Preload and apply main.min.css (or style.css) once loaded -->
     
-        <link rel="stylesheet" href="/assets/css/main.min.css" rel="preload" media="print" onload="this.media='all'">
+        <link href="/assets/css/main.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
     
 
     <!-- Alpine.js for interactive components -->
