@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Hello to Stattic | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+  
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic Site</a></h2>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Say Hello to Stattic</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2024-10-02</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>Welcome to <strong>Stattic</strong>, the lightweight, no-fuss, modern static site generator that's changing the way websites are built. </p>
+<p>If you've ever been frustrated with the sluggishness, archaic architecture and endless database queries of traditional content management systems (yes, we're looking at you, <strong>WordPress</strong>), then Stattic is here to offer a better way forward.</p>
+<h2>What is Stattic?</h2>
+<p>Stattic is a <strong>static site generator</strong> designed for developers, content creators, and anyone who values <strong>speed</strong>, <strong>simplicity</strong>, and <strong>security</strong> in their website builds. Stattic takes your content, processes it with modern templating, and outputs pure <strong>static HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> files that can be deployed anywhere – from simple web hosts to CDNs like Netlify, Cloudflare Pages, or GitHub Pages.</p>
+<h3>Why Stattic?</h3>
+<p>Users demand <strong>speed</strong> and <strong>reliability</strong>, which is what Stattic excels at. While sites powered by WordPress often fall victim to slow database calls, bloated plugins, and constant security patches, Stattic keeps things lean and mean.</p>
+<p>Here's what you can expect when you build with Stattic:</p>
+<h3>1. <strong>Blazing Fast Page Loads</strong></h3>
+<p><img alt="Google Page Speed Insights" src="../images/google-pagespeed-insights.jpg" /></p>
+<p>With Stattic, you can forget about slow load times. <a href="https://stattic.site">Stattic</a> sites are <strong>static HTML</strong> at their core, meaning no server-side rendering or database calls are needed. Every page is pre-rendered and ready to be served instantly, resulting in blazing fast page loads. Say goodbye to that dreaded <strong>"waiting for the database"</strong> delay that can leave your visitors hanging on WordPress.</p>
+<h3>2. <strong>No Database, No Problem</strong></h3>
+<p>Databases are great until they aren't. When they go down, get corrupted, or become a security vulnerability, your entire site can go with them. Stattic doesn't need a database at all. That's right, your site is pure <strong>static files</strong> – HTML, CSS, and JavaScript. This means less to go wrong and more reliability, especially under high traffic.</p>
+<h3>3. <strong>Modern, Clean Code</strong></h3>
+<p>Stattic leverages modern web development practices like templating with <strong>Jinja2</strong>, a Python-powered templating engine. Your templates stay clean, reusable, and easy to maintain. You can apply DRY (Don't Repeat Yourself) principles to your layout, making design changes effortless across your site. Unlike WordPress, where themes can feel like tangled spaghetti code, Stattic keeps things modular and organized.</p>
+<h3>4. <strong>Security as a Standard</strong></h3>
+<p>By removing the need for dynamic server-side rendering and databases, you eliminate a huge number of potential attack vectors. Stattic websites are inherently more secure because there are no moving parts that can be exploited by hackers. No more worrying about outdated plugins or surprise security vulnerabilities that can make your WordPress site a target.</p>
+<h3>5. <strong>Flexibility with Zero Bloat</strong></h3>
+<p>If you've ever worked with WordPress, you know how quickly things can get bloated with unused plugins, themes, and database tables. Stattic is different. It's lightweight and only includes what you need. If you want to integrate a new feature, you simply add it to the codebase – no plugins required, no bloat added.</p>
+<h3>6. <strong>Fully Customizable</strong></h3>
+<p>Stattic gives you full control over every aspect of your website. Need custom fonts? With Stattic's <code>--fonts</code> option, you can download and include any Google Fonts you like. Want a clean and efficient build process? Use the <code>--minify</code> flag to compress all your CSS and JavaScript into optimized single files, reducing load times and improving performance.</p>
+<p>Here's a quick example of how easy it is to build your site with Stattic:</p>
+<p><code>python3 stattic.py --output=output --minify --fonts="Lato,Montserrat"</code></p>
+<p>In one simple command, Stattic:</p>
+<ul>
+<li>Builds your site into the output folder.</li>
+<li>Minifies your CSS and JS files for faster load times.</li>
+<li>Downloads and includes the Lato and Montserrat fonts for use in your design.</li>
+</ul>
+<h3>7. Hosting Freedom</h3>
+<p>Since Stattic outputs static files, you're not tied down to any specific hosting provider. You can deploy your Stattic site anywhere – GitHub Pages, Netlify, Vercel, or even on traditional servers. No need to pay for heavy managed hosting like some other platforms force you into (cough WordPress cough).</p>
+<h3>8. No More Updates Breaking Your Site</h3>
+<p>How many times has a WordPress update caused something to break on your site? It's a never-ending cycle of patching, fixing, and hoping nothing crashes. Stattic is simple: once your site is built, there's no moving parts to update or break. It just works.</p>
+<h3>Why Move Away from WordPress?</h3>
+<p>While WordPress has had its time and place, its complexity has grown over the years. With each update comes the risk of breaking plugins, themes, or customizations. Security vulnerabilities are a constant concern, and managing performance with a database-backed site can be challenging.</p>
+<p><strong>Stattic</strong> is the alternative for developers and site owners who want control, speed, and security without the headache of managing servers, databases, and plugins. It's built for the future of the web: static, fast, and reliable.</p>
+<h2>Ready to Try Stattic?</h2>
+<p>If you're ready to leave behind the heavy lifting of WordPress and try something modern and efficient, Stattic is here for you. Whether you're a developer looking for a clean and customizable solution or a small business owner who just wants a fast and secure website, Stattic will get you there with less hassle.</p>
+<p>Welcome to the world of Stattic – where speed, simplicity, and security come first.</p>
+<p>Ready to build your first Stattic site? Check out the <a href="/posts/customizing-stattic/">getting started guide</a> and get started today!</p>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>
