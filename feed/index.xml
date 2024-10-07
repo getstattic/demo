@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+    <title>demo.stattic.site</title>
+    <link>https://demo.stattic.site/</link>
+    <description>Latest posts from demo.stattic.site</description>
+    <atom:link href="https://demo.stattic.site/feed/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Oct 2024 04:07:20 GMT</lastBuildDate>
+    <language>en-us</language>
+    
+    <item>
+    <title>Customizing Stattic: Command-Line Arguments for Stattic - demo.stattic.site</title>
+    <link>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</link>
+    <description>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files,...
+</description>
+    <guid isPermaLink="false">4dba6e3f3cdb7551df5988d0b8447b67</guid>
+    <pubDate>Mon, 07 Oct 2024 00:07:20 +0000</pubDate>
+    </item>
+    
+    <item>
+    <title>Decentralizing Publishing with Stattic - demo.stattic.site</title>
+    <link>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</link>
+    <description>When control over content and website creation is increasingly centralized under unstable power, there's a growing need for tools that empower the community to publish independently. Stattic is an open...
+</description>
+    <guid isPermaLink="false">7ed4c00762c74a4a1ac20195fdf221fb</guid>
+    <pubDate>Mon, 07 Oct 2024 00:07:20 +0000</pubDate>
+    </item>
+    
+    <item>
+    <title>How to Build and Deploy Your Website with Stattic and GitHub Pages - demo.stattic.site</title>
+    <link>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</link>
+    <description>With Stattic, you can easily build a static site and deploy it to GitHub Pages for free hosting. This guide will walk you through how to create your site, export...
+</description>
+    <guid isPermaLink="false">2e6d015774e0fbac652fe13bcfa9bbca</guid>
+    <pubDate>Mon, 07 Oct 2024 00:07:20 +0000</pubDate>
+    </item>
+    
+    <item>
+    <title>Customizing Stattic: Front Matter Fields - demo.stattic.site</title>
+    <link>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</link>
+    <description>1. title - Description: The title of your post or page. - Type: String - Default: 'Untitled' - Usage: title: &amp;quot;Your Post Title&amp;quot; ### 2. date - Description: The...
+</description>
+    <guid isPermaLink="false">953a4a2ea122dfa6853c9fa0e5bc733e</guid>
+    <pubDate>Mon, 07 Oct 2024 00:07:20 +0000</pubDate>
+    </item>
+    
+    <item>
+    <title>Say Hello to Stattic - demo.stattic.site</title>
+    <link>https://demo.stattic.site/blog/say-hello-to-stattic/</link>
+    <description>Welcome to Stattic, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've...
+</description>
+    <guid isPermaLink="false">82f78c83cabcc44391683ab9447aac0b</guid>
+    <pubDate>Mon, 07 Oct 2024 00:07:20 +0000</pubDate>
+    </item>
+    
+    </channel>
+    </rss>
+    
