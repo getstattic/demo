@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Stattic</title>
+    <title>Contact Us | Stattic</title>
 
     <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
     <meta name="keywords" content="SSG, Static Site Generator">
@@ -19,7 +19,12 @@
 </head>
 <body class="bg-background text-primary quicksand-300">
 
-<header class="bg-background shadow">
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
     <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
         <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
 
@@ -28,11 +33,11 @@
             <ul class="flex space-x-6">
                 
                     <li>
-                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
                     </li>
                 
                     <li>
-                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
                     </li>
                 
             </ul>
@@ -40,24 +45,31 @@
     </div>
 </header>
 
-<main class="container max-w-2xl m-auto py-10 px-4">
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
     
-<h1 class="text-6xl font-bold mb-8 pb-8 text-links quicksand-700 border-b border-primary">Contact</h1>
+<h1 class="text-6xl font-bold mb-8 pb-8 text-links quicksand-700 border-b border-primary">Contact Us</h1>
 <div class="stattic-content prose dark:prose-dark">
-    <h1>Contact</h1>
-<p>Fill out the form below to get in touch.</p>
-<p>Your Name<em> 
-Email Address</em> 
-Website URL 
-Budget 
---Please choose an option--&lt; $2,000$2,000 - $5,000$5,000 - $10,000$10,000 +
-Project Details* 
-* = required</p>
+    <h2>Get in Touch</h2>
+<p>I'd love to hear from you! Whether you have questions about <strong>Stattic</strong>, feedback, or need support, feel free to reach out.</p>
+<h3>Direct Email</h3>
+<p>If you prefer, you can email directly at:</p>
+<p><strong>Email</strong>: me@robertdevore.com</p>
+<h3>Support and Community</h3>
+<p>If you're looking for more immediate support or want to engage with the <strong>Stattic</strong> community, you can check out:</p>
+<ul>
+<li><a href="https://github.com/getstattic/stattic/issues">GitHub Issues</a>: For bug reports or feature requests.</li>
+</ul>
+<h3>Follow Us</h3>
+<p>Stay updated with the latest news and developments:</p>
+<ul>
+<li><strong>Twitter</strong>: <a href="https://twitter.com/getstattic">@getStattic</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/getstattic/stattic">Stattic Repository</a></li>
+</ul>
 </div>
 
 </main>
 
-<footer class="bg-background border-t border-primary mt-10 py-6">
+<footer class="bg-background border-t border-primary mt-10 py-6" id="footer">
     <div class="container max-w-screen-xl m-auto px-4 text-center">
         <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold" aria-label="Stattic - opens in a new tab">Stattic</a></p>
     </div>
