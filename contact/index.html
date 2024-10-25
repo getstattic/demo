@@ -9,13 +9,14 @@
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert">
 
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    <!-- Use relative_path to correctly reference assets -->
+    <link href="../assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
-        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+        <link href="../assets/css/main.min.css" rel="stylesheet preload" as="style">
     
 
     <!-- Alpine.js for interactive components -->
-    <script src="/assets/js/alpine.min.js" defer></script>
+    <script src="../assets/js/alpine.min.js" defer></script>
 </head>
 <body class="bg-background text-primary quicksand-300">
 
@@ -26,19 +27,24 @@
 
 <header class="bg-background shadow" id="navigation">
     <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
-        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
-
-        <!-- Navigation Menu -->
+        <!-- Home link using relative_path -->
+        <h2 class="text-3xl font-bold quicksand-700"><a href="../index.html" class="text-links">Stattic</a></h2>
         <nav>
             <ul class="flex space-x-6">
                 
-                    <li>
-                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../about/index.html" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                        </li>
+                    
                 
-                    <li>
-                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../contact/index.html" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                        </li>
+                    
                 
             </ul>
         </nav>
@@ -65,6 +71,7 @@
 <li><strong>Twitter</strong>: <a href="https://twitter.com/getstattic">@getStattic</a></li>
 <li><strong>GitHub</strong>: <a href="https://github.com/getstattic/stattic">Stattic Repository</a></li>
 </ul>
+
     </div>
 </main>
 

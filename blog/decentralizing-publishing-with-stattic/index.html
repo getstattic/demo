@@ -9,13 +9,14 @@
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert">
 
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    <!-- Use relative_path to correctly reference assets -->
+    <link href="../../assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
-        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+        <link href="../../assets/css/main.min.css" rel="stylesheet preload" as="style">
     
 
     <!-- Alpine.js for interactive components -->
-    <script src="/assets/js/alpine.min.js" defer></script>
+    <script src="../../assets/js/alpine.min.js" defer></script>
 </head>
 <body class="bg-background text-primary quicksand-300">
 
@@ -26,19 +27,24 @@
 
 <header class="bg-background shadow" id="navigation">
     <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
-        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
-
-        <!-- Navigation Menu -->
+        <!-- Home link using relative_path -->
+        <h2 class="text-3xl font-bold quicksand-700"><a href="../../index.html" class="text-links">Stattic</a></h2>
         <nav>
             <ul class="flex space-x-6">
                 
-                    <li>
-                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../../about/index.html" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                        </li>
+                    
                 
-                    <li>
-                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../../contact/index.html" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                        </li>
+                    
                 
             </ul>
         </nav>
@@ -60,18 +66,18 @@
 <p>Stattic uses Markdown for content creation, allowing you to write posts and pages in a straightforward and readable format.</p>
 <p>It employs the Mistune library to convert Markdown to HTML efficiently, supporting features like tables, task lists, and strikethrough text.</p>
 <h3>2. Template Rendering with Jinja2</h3>
-<p>The generator utilizes Jinja2 templates for rendering HTML pages. </p>
+<p>The generator utilizes Jinja2 templates for rendering HTML pages.</p>
 <p>This separation of content and presentation ensures flexibility and ease of maintenance, allowing you to customize the look and feel of your site without altering the content.</p>
 <h3>3. Front Matter Metadata</h3>
 <p>Each Markdown file can include front matter written in YAML. This metadata lets you define titles, authors, dates, categories, tags, and custom URLs, giving you control over how each page or post is presented.</p>
 <p>You can also add any custom metadata you'd like and then use it in the <code>templates</code> files, giving you unparalleled control over what content is displayed and in the way you best see fit.</p>
 <h3>4. Automatic Image Handling</h3>
-<p>Stattic processes images found in your Markdown content by downloading external images, converting them to the efficient WebP format using the Pillow library, and updating the content to reference the local image files. </p>
+<p>Stattic processes images found in your Markdown content by downloading external images, converting them to the efficient WebP format using the Pillow library, and updating the content to reference the local image files.</p>
 <p>This improves site performance and ensures all assets are self-contained right out of the box.</p>
 <h3>5. Google Fonts Integration</h3>
 <p>The tool can download specified Google Fonts and save them locally. This reduces external dependencies and improves page load times. You can specify fonts like <code>Quicksand</code> or <code>Roboto</code> directly in the command-line options.</p>
 <h3>6. Asset Management</h3>
-<p>Stattic handles your CSS and JavaScript assets by copying them from a designated assets directory to the output directory. </p>
+<p>Stattic handles your CSS and JavaScript assets by copying them from a designated assets directory to the output directory.</p>
 <p>It offers an option to minify these assets using <code>csscompressor</code> and <code>rjsmin</code>, combining them into single minified files to optimize loading times.</p>
 <h3>7. Logging and Error Handling</h3>
 <p>Comprehensive logging is also built-in, recording the build process and any issues that arise. Logs are saved in a dedicated <code>logs</code> directory, aiding in troubleshooting and ensuring transparency.</p>
@@ -92,32 +98,30 @@
 <p><strong>Example:</strong> <code>--posts-per-page 5</code></p>
 <h3>11. Automatic Excerpts</h3>
 <p>If an excerpt isn't provided in the front matter, Stattic automatically generates one from the first few words of the content, ensuring that summaries are always available.</p>
-<p><strong>Example:</strong> <code>excerpt: "Custom text goes here"</code></p>
+<p><strong>Example:</strong> <code>excerpt: &quot;Custom text goes here&quot;</code></p>
 <h3>12. Customizable Navigation</h3>
 <p>Pages are loaded and sorted based on an 'order' value in their metadata, allowing you to customize the navigation structure of your site.</p>
 <p>In the front matter it's as simple as adding one word and one number.</p>
 <p><strong>Example:</strong> <code>order: 5</code></p>
 <h2>Getting Started with Stattic</h2>
 <ol>
-<li>
-<p><strong>Organize Your Content</strong>: Place your Markdown files in the <code>content/posts</code> and <code>content/pages</code> directories.</p>
+<li><p><strong>Organize Your Content</strong>: Place your Markdown files in the <code>content/posts</code> and <code>content/pages</code> directories.</p>
 </li>
-<li>
-<p><strong>Customize Templates</strong>: Modify the templates in the <code>templates</code> directory using Jinja2 syntax to match your desired layout and design.</p>
+<li><p><strong>Customize Templates</strong>: Modify the templates in the <code>templates</code> directory using Jinja2 syntax to match your desired layout and design.</p>
 </li>
-<li>
-<p><strong>Run the Generator</strong>: Use the command-line interface to build your site:</p>
+<li><p><strong>Run the Generator</strong>: Use the command-line interface to build your site:</p>
 </li>
 </ol>
-<p><code>python3 stattic.py --output ~/my_website --posts-per-page 10 --sort-by date --fonts "Quicksand, Roboto" --minify</code></p>
-<ol>
+<p><code>python3 stattic.py --output ~/my_website --posts-per-page 10 --sort-by date --fonts &quot;Quicksand, Roboto&quot; --minify</code></p>
+<ol start="4">
 <li><strong>Review the Output</strong>: Your static site will be generated in the specified output directory, ready to be deployed to any static hosting service of your choice.</li>
 </ol>
 <h2>Decentralized Publishing for the People</h2>
-<p><strong>Stattic</strong> is a bullshit free tool that empowers you to publish content on your own terms. </p>
+<p><strong>Stattic</strong> is a bullshit free tool that empowers you to publish content on your own terms.</p>
 <p>By simplifying static site generation and efficiently handling assets, it supports the movement toward decentralizing publishing. Whether you're a developer or a content creator, Stattic offers a minimalistic yet powerful solution for building your online presence.</p>
 <p>Feel free to contribute to the project on <a href="https://github.com/getstattic/stattic">GitHub</a> or customize it to suit your specific needs. The project is covered under the MIT license which is also included in the GitHub repository.</p>
 <p>Together, we can promote a more decentralized and independent web 🤘</p>
+
         </div>
     </article>
 </main>

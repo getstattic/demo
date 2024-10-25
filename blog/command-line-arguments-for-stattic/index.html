@@ -9,13 +9,14 @@
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert">
 
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    <!-- Use relative_path to correctly reference assets -->
+    <link href="../../assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
-        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+        <link href="../../assets/css/main.min.css" rel="stylesheet preload" as="style">
     
 
     <!-- Alpine.js for interactive components -->
-    <script src="/assets/js/alpine.min.js" defer></script>
+    <script src="../../assets/js/alpine.min.js" defer></script>
 </head>
 <body class="bg-background text-primary quicksand-300">
 
@@ -26,19 +27,24 @@
 
 <header class="bg-background shadow" id="navigation">
     <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
-        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
-
-        <!-- Navigation Menu -->
+        <!-- Home link using relative_path -->
+        <h2 class="text-3xl font-bold quicksand-700"><a href="../../index.html" class="text-links">Stattic</a></h2>
         <nav>
             <ul class="flex space-x-6">
                 
-                    <li>
-                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../../about/index.html" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                        </li>
+                    
                 
-                    <li>
-                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="../../contact/index.html" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                        </li>
+                    
                 
             </ul>
         </nav>
@@ -56,14 +62,14 @@
 <p>In this post, we'll go through some of the most useful command-line arguments you can use with Stattic to tailor the build process to your needs.</p>
 <h2>Basic Usage</h2>
 <p>To start with, let's look at the basic command to build your site with Stattic:</p>
-<p><code>python3 stattic.py --output=output</code></p>
-<p>This command will build your site and save the generated files into the output folder.</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output
+</code></pre><p>This command will build your site and save the generated files into the output folder.</p>
 <p>But there's so much more you can do! Let's dive into the different arguments you can use.</p>
 <h2>Using the <code>--minify</code> Flag</h2>
-<p>One of the most useful features of <a href="/">Stattic</a> is the ability to minify all of your CSS and JavaScript files with the <code>--minify</code> flag. This is great for production environments where you want to reduce the file size of your assets for faster page load times.</p>
+<p>One of the most useful features of &lt;a href=&quot;/&quot;&gt;Stattic&lt;/a&gt; is the ability to minify all of your CSS and JavaScript files with the <code>--minify</code> flag. This is great for production environments where you want to reduce the file size of your assets for faster page load times.</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --minify</code></p>
-<p>This will:</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --minify
+</code></pre><p>This will:</p>
 <ul>
 <li>Combine all CSS files into a single <code>main.min.css</code> file.</li>
 <li>Combine all JavaScript files into a single <code>main.min.js</code> file.</li>
@@ -74,8 +80,8 @@
 <h2>Adding Google Fonts with <code>--fonts</code></h2>
 <p>Want to include Google Fonts in your site? <strong>Stattic</strong> lets you specify which fonts to download using the <code>--fonts</code> argument. By default, the Quicksand font is used but you are able to override it with your own fonts.</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --fonts="Roboto,Open+Sans"</code></p>
-<p>This command will download the specified fonts (in this case, Roboto and Open Sans) and automatically generate CSS files to use them in your site.</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --fonts=&quot;Roboto,Open+Sans&quot;
+</code></pre><p>This command will download the specified fonts (in this case, Roboto and Open Sans) and automatically generate CSS files to use them in your site.</p>
 <h3>How It Works:</h3>
 <ul>
 <li>Stattic fetches the fonts from the Google Fonts API.</li>
@@ -86,19 +92,19 @@
 <h2>Applying Custom Fonts in HTML</h2>
 <p>Once you've added your fonts using the <code>--fonts</code> argument, you can easily apply them in your HTML templates by using the class names generated by Stattic.</p>
 <p>For example, to apply Roboto 400 to a heading:</p>
-<p><code>`&lt;h1 class="roboto-400"&gt;Welcome to My Site&lt;/h1&gt;`</code></p>
-<h2>Customizing the Number of Posts per Page with <code>--posts-per-page</code></h2>
+<pre style="white-space: pre-wrap;"><code>`&lt;h1 class=&quot;roboto-400&quot;&gt;Welcome to My Site&lt;/h1&gt;`
+</code></pre><h2>Customizing the Number of Posts per Page with <code>--posts-per-page</code></h2>
 <p>By default, Stattic shows 5 posts per page, but you can change this using the <code>--posts-per-page</code> argument.</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --posts-per-page=10</code></p>
-<p>This will generate pages that show <code>10</code> posts at a time, instead of the default <code>5</code>.</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --posts-per-page=10
+</code></pre><p>This will generate pages that show <code>10</code> posts at a time, instead of the default <code>5</code>.</p>
 <h2>How It Works:</h2>
 <p>Stattic will paginate your posts, creating multiple pages (if necessary) based on the number of posts you choose to display. This is particularly useful if you have a blog with a lot of content and want to limit the number of posts on the homepage or archive pages.</p>
 <h2>Sorting Posts by Date, Title, or Author with <code>--sort-by</code></h2>
 <p>You can also change the way posts are sorted using the <code>--sort-by</code> argument. You can sort posts by date, title, or author.</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --sort-by=title</code></p>
-<p>This will sort the posts alphabetically by their title when building the site.</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --sort-by=title
+</code></pre><p>This will sort the posts alphabetically by their title when building the site.</p>
 <h3>Available Options:</h3>
 <ul>
 <li><code>--sort-by=date</code> (default)</li>
@@ -108,13 +114,13 @@
 <h2>Watching for File Changes with <code>--watch</code></h2>
 <p>If you're actively developing a site and making frequent changes, the <code>--watch</code> flag is a huge time-saver. It automatically rebuilds the site whenever you change a content file.</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --watch</code></p>
-<p>With this command, Stattic will continue running in the background, watching for changes to your Markdown, template, or asset files. Whenever it detects a change, it will rebuild the site automatically, so you don't need to run the build command manually each time.</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --watch
+</code></pre><p>With this command, Stattic will continue running in the background, watching for changes to your Markdown, template, or asset files. Whenever it detects a change, it will rebuild the site automatically, so you don't need to run the build command manually each time.</p>
 <h2>Combining Multiple Arguments</h2>
 <p>You can combine multiple arguments to customize your build even further. For example, you can download fonts, set the number of posts per page, and enable minification all at once:</p>
 <h3>Example Usage:</h3>
-<p><code>python3 stattic.py --output=output --minify --fonts="Lato,Montserrat" --posts-per-page=8 --sort-by=date</code></p>
-<p>This will:</p>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --minify --fonts=&quot;Lato,Montserrat&quot; --posts-per-page=8 --sort-by=date
+</code></pre><p>This will:</p>
 <ul>
 <li>Minify all CSS and JS files.</li>
 <li>Download the Lato and Montserrat fonts.</li>
@@ -123,82 +129,84 @@
 </ul>
 <h2>Summary of Useful Arguments</h2>
 <p>Here's a quick reference for some of the most useful command-line arguments in Stattic:</p>
-<table>
-  <thead>
-    <tr>
-      <th>Argument</th>
-      <th>Description</th>
-      <th>Example Usage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>--output=&lt;path&gt;</code></td>
-      <td>Specify the output directory for the generated site.</td>
-      <td><code>--output=output</code></td>
-    </tr>
-    <tr>
-      <td><code>--minify</code></td>
-      <td>Minify CSS and JS into single files.</td>
-      <td><code>--minify</code></td>
-    </tr>
-    <tr>
-      <td><code>--fonts=&lt;fonts&gt;</code></td>
-      <td>Download and include Google Fonts.</td>
-      <td><code>--fonts="Lato, Montserrat"</code></td>
-    </tr>
-    <tr>
-      <td><code>--posts-per-page=&lt;num&gt;</code></td>
-      <td>Set the number of posts to display per page.</td>
-      <td><code>--posts-per-page=10</code></td>
-    </tr>
-    <tr>
-      <td><code>--sort-by=&lt;option&gt;</code></td>
-      <td>Sort posts by date, title, or author.</td>
-      <td><code>--sort-by=title</code></td>
-    </tr>
-    <tr>
-      <td><code>--watch</code></td>
-      <td>Watch for file changes and automatically rebuild.</td>
-      <td><code>--watch</code></td>
-    </tr>
-  </tbody>
-</table>
-
+<p>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Argument&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Example Usage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--output=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Specify the output directory for the generated site.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--output=output&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--minify&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Minify CSS and JS into single files.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--minify&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--fonts=&amp;lt;fonts&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Download and include Google Fonts.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--fonts=&quot;Lato, Montserrat&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--posts-per-page=&amp;lt;num&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Set the number of posts to display per page.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--posts-per-page=10&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--sort-by=&amp;lt;option&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Sort posts by date, title, or author.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--sort-by=title&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;--watch&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Watch for file changes and automatically rebuild.&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;--watch&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</p>
 <h2>Additional Features in Stattic</h2>
 <h3>Logging System</h3>
 <p>Stattic includes a robust logging system that records both INFO and DEBUG level logs. Logs are saved in a <code>/logs</code> folder with a timestamped filename. The logs can help in debugging and monitoring the build process.</p>
 <h3>Image Conversion to WebP</h3>
 <p>Stattic automatically downloads images referenced in your markdown content and converts them to WebP format for optimal performance. These images are stored in the <code>output/images/</code> folder, and the URLs in your content are replaced with local paths to the WebP versions.</p>
 <h3>Markdown to HTML Conversion with Mistune</h3>
-<p>Stattic uses the Mistune library to convert markdown content to HTML. Mistune supports various plugins, including:
-- Task lists
-- Tables
-- Strikethrough text</p>
+<p>Stattic uses the Mistune library to convert markdown content to HTML. Mistune supports various plugins, including:</p>
+<ul>
+<li>Task lists</li>
+<li>Tables</li>
+<li>Strikethrough text</li>
+</ul>
 <p>This allows you to include advanced markdown features in your posts and pages.</p>
 <h3>Custom Templates for Posts and Pages</h3>
 <p>You can specify custom templates for individual posts or pages by adding a <code>template</code> field to the frontmatter of your markdown files. For example:</p>
-<p><code>template: my_custom_template</code> </p>
-<p>Stattic will use the <code>my_custom_template.html</code> file from the <code>templates</code> directory when generating the HTML.</p>
+<pre style="white-space: pre-wrap;"><code>template: my_custom_template
+</code></pre><p>Stattic will use the <code>my_custom_template.html</code> file from the <code>templates</code> directory when generating the HTML.</p>
 <h3>Categories, Tags, and Authors from YAML</h3>
 <p>Stattic loads categories, tags, and author information from YAML files located in the <code>content/</code> directory. These YAML files allow you to organize your content more easily. Here's an example of how to define a category in <code>categories.yml</code>:</p>
-<p><code>1:
-  name: "Category One"
+<pre style="white-space: pre-wrap;"><code>1:
+  name: &quot;Category One&quot;
 2:
-  name: "Category Two"</code> </p>
-<p>In your posts, you can reference these categories by their ID:</p>
-<p><code>categories:
+  name: &quot;Category Two&quot;
+</code></pre><p>In your posts, you can reference these categories by their ID:</p>
+<pre style="white-space: pre-wrap;"><code>categories:
   - 1
-  - 2</code> </p>
-<p>The same applies to tags (<code>tags.yml</code>) and authors (<code>authors.yml</code>).</p>
+  - 2
+</code></pre><p>The same applies to tags (<code>tags.yml</code>) and authors (<code>authors.yml</code>).</p>
 <h3>Static Pages</h3>
 <p>You can create static pages (such as a contact page) using templates. To generate static pages, Stattic uses the <code>build_static_pages()</code> method. An example page is the Contact page, which can be created by specifying a template like <code>page.html</code>:</p>
 <p><code>&lt;h1&gt;Contact Us&lt;/h1&gt;&lt;p&gt;Contact page content goes here.&lt;/p&gt;</code></p>
 <h2>Conclusion</h2>
-<p><strong>Stattic</strong> is designed to be flexible and adaptable to your needs, and these command-line arguments help you get the most out of it. </p>
+<p><strong>Stattic</strong> is designed to be flexible and adaptable to your needs, and these command-line arguments help you get the most out of it.</p>
 <p>Whether you're optimizing your site for production with <code>--minify</code>, or downloading your favorite Google Fonts with <code>--fonts</code>, you have complete control over the build process.</p>
 <p>Feel free to experiment with these arguments and create a workflow that works best for you!</p>
 <p>Happy building!</p>
+
         </div>
     </article>
 </main>

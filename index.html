@@ -9,13 +9,14 @@
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert DeVore">
 
-    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    <!-- Use relative_path to correctly reference assets -->
+    <link href="assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
-        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+        <link href="assets/css/main.min.css" rel="stylesheet preload" as="style">
     
 
     <!-- Alpine.js for interactive components -->
-    <script src="/assets/js/alpine.min.js" defer></script>
+    <script src="assets/js/alpine.min.js" defer></script>
 </head>
 <body class="bg-background text-primary quicksand-300">
 
@@ -26,19 +27,24 @@
 
 <header class="bg-background shadow" id="navigation">
     <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
-        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
-
-        <!-- Navigation Menu -->
+        <!-- Home link using relative_path -->
+        <h2 class="text-3xl font-bold quicksand-700"><a href="index.html" class="text-links">Stattic</a></h2>
         <nav>
             <ul class="flex space-x-6">
                 
-                    <li>
-                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Stattic</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="about/index.html" class="text-primary hover:underline quicksand-700">About Stattic</a>
+                        </li>
+                    
                 
-                    <li>
-                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact Us</a>
-                    </li>
+                    
+                        <li>
+                            <!-- Internal links using relative_path and permalink -->
+                            <a href="contact/index.html" class="text-primary hover:underline quicksand-700">Contact Us</a>
+                        </li>
+                    
                 
             </ul>
         </nav>
@@ -51,7 +57,8 @@
         
         <li>
             <h2 class="text-4xl font-bold quicksand-700">
-                <a href="/blog/say-hello-to-stattic/" class="text-links hover:underline">Say Hello to Stattic</a>
+                <!-- Updated href to point to index.html within the post directory -->
+                <a href="blog/say-hello-to-stattic/index.html" class="text-links hover:underline">Say Hello to Stattic</a>
             </h2>
             <div class="dark:text-gray-400"><p>Welcome to <strong>Stattic</strong>, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've...</p>
 </div>
@@ -59,7 +66,8 @@
         
         <li>
             <h2 class="text-4xl font-bold quicksand-700">
-                <a href="/blog/decentralizing-publishing-with-stattic/" class="text-links hover:underline">Decentralizing Publishing with Stattic</a>
+                <!-- Updated href to point to index.html within the post directory -->
+                <a href="blog/decentralizing-publishing-with-stattic/index.html" class="text-links hover:underline">Decentralizing Publishing with Stattic</a>
             </h2>
             <div class="dark:text-gray-400"><p>When control over content and website creation is increasingly centralized under unstable power, there's a growing need for tools that empower the community to publish independently. <strong>Stattic</strong> is an open...</p>
 </div>
@@ -67,7 +75,8 @@
         
         <li>
             <h2 class="text-4xl font-bold quicksand-700">
-                <a href="/blog/front-matter-fields-for-stattic/" class="text-links hover:underline">Customizing Stattic: Front Matter Fields</a>
+                <!-- Updated href to point to index.html within the post directory -->
+                <a href="blog/front-matter-fields-for-stattic/index.html" class="text-links hover:underline">Customizing Stattic: Front Matter Fields</a>
             </h2>
             <div class="dark:text-gray-400"><h3>1. <strong>title</strong> - <strong>Description</strong>: The title of your post or page. - <strong>Type</strong>: String - <strong>Default</strong>: <code>'Untitled'</code> - <strong>Usage</strong>: <code>title: &quot;Your Post Title&quot;</code> ### 2. <strong>date</strong> - <strong>Description</strong>: The...</h3>
 </div>
@@ -75,7 +84,8 @@
         
         <li>
             <h2 class="text-4xl font-bold quicksand-700">
-                <a href="/blog/command-line-arguments-for-stattic/" class="text-links hover:underline">Customizing Stattic: Command-Line Arguments for Stattic</a>
+                <!-- Updated href to point to index.html within the post directory -->
+                <a href="blog/command-line-arguments-for-stattic/index.html" class="text-links hover:underline">Customizing Stattic: Command-Line Arguments for Stattic</a>
             </h2>
             <div class="dark:text-gray-400"><p>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files,...</p>
 </div>
@@ -83,7 +93,8 @@
         
         <li>
             <h2 class="text-4xl font-bold quicksand-700">
-                <a href="/blog/build-with-stattic-and-deploy-on-github-pages/" class="text-links hover:underline">How to Build and Deploy Your Website with Stattic and GitHub Pages</a>
+                <!-- Updated href to point to index.html within the post directory -->
+                <a href="blog/build-with-stattic-and-deploy-on-github-pages/index.html" class="text-links hover:underline">How to Build and Deploy Your Website with Stattic and GitHub Pages</a>
             </h2>
             <div class="dark:text-gray-400"><p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a> for free hosting. This guide will walk you through how to create your site, export...</p>
 </div>
