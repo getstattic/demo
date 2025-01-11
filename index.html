@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stattic</title>
-
     <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
     <meta name="keywords" content="SSG, Static Site Generator">
     <meta name="author" content="Robert DeVore">
-
-    <!-- Use relative_path to correctly reference assets -->
     <link href="assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
-        <link href="assets/css/main.min.css" rel="stylesheet preload" as="style">
+    <link href="assets/css/stattic.css" rel="stylesheet preload" as="style">
+    <link href="assets/css/fonts.css" rel="stylesheet preload" as="style">
     
-
+    <!-- Canonical URL -->
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="Stattic is a fast, lightweight static site generator.">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="Stattic is a fast, lightweight static site generator.">
+    
     <!-- Alpine.js for interactive components -->
     <script src="assets/js/alpine.min.js" defer></script>
 </head>
-<body class="bg-background text-primary quicksand-300">
+<body class="bg-background bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 to-slate-950 text-primary quicksand-300">
 
 <!-- Skip Links for Accessibility -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#footer" class="skip-link">Skip to footer</a>
 
-<header class="bg-background shadow" id="navigation">
-    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+<header id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between items-center">
         <!-- Home link using relative_path -->
         <h2 class="text-3xl font-bold quicksand-700"><a href="index.html" class="text-links">Stattic</a></h2>
         <nav>
@@ -56,47 +66,42 @@
     <ul class="space-y-6">
         
         <li>
-            <h2 class="text-4xl font-bold quicksand-700">
-                <!-- Updated href to point to index.html within the post directory -->
+            <h2 class="text-4xl mb-2 font-bold quicksand-700">
                 <a href="blog/say-hello-to-stattic/index.html" class="text-links hover:underline">Say Hello to Stattic</a>
             </h2>
-            <div class="dark:text-gray-400"><p>Welcome to <strong>Stattic</strong>, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've...</p>
+            <div class="dark:text-slate-50 mb-2"><p>Welcome to <strong>Stattic</strong>, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've...</p>
 </div>
         </li>
         
         <li>
-            <h2 class="text-4xl font-bold quicksand-700">
-                <!-- Updated href to point to index.html within the post directory -->
+            <h2 class="text-4xl mb-2 font-bold quicksand-700">
                 <a href="blog/decentralizing-publishing-with-stattic/index.html" class="text-links hover:underline">Decentralizing Publishing with Stattic</a>
             </h2>
-            <div class="dark:text-gray-400"><p>When control over content and website creation is increasingly centralized under unstable power, there's a growing need for tools that empower the community to publish independently. <strong>Stattic</strong> is an open...</p>
+            <div class="dark:text-slate-50 mb-2"><p>When control over content and website creation is increasingly centralized under unstable power, there's a growing need for tools that empower the community to publish independently. <strong>Stattic</strong> is an open...</p>
 </div>
         </li>
         
         <li>
-            <h2 class="text-4xl font-bold quicksand-700">
-                <!-- Updated href to point to index.html within the post directory -->
+            <h2 class="text-4xl mb-2 font-bold quicksand-700">
                 <a href="blog/front-matter-fields-for-stattic/index.html" class="text-links hover:underline">Customizing Stattic: Front Matter Fields</a>
             </h2>
-            <div class="dark:text-gray-400"><h3>1. <strong>title</strong> - <strong>Description</strong>: The title of your post or page. - <strong>Type</strong>: String - <strong>Default</strong>: <code>'Untitled'</code> - <strong>Usage</strong>: <code>title: &quot;Your Post Title&quot;</code> ### 2. <strong>date</strong> - <strong>Description</strong>: The...</h3>
+            <div class="dark:text-slate-50 mb-2"><h3>1. <strong>title</strong> - <strong>Description</strong>: The title of your post or page. - <strong>Type</strong>: String - <strong>Default</strong>: <code>'Untitled'</code> - <strong>Usage</strong>: <code>title: &quot;Your Post Title&quot;</code> ### 2. <strong>date</strong> - <strong>Description</strong>: The...</h3>
 </div>
         </li>
         
         <li>
-            <h2 class="text-4xl font-bold quicksand-700">
-                <!-- Updated href to point to index.html within the post directory -->
+            <h2 class="text-4xl mb-2 font-bold quicksand-700">
                 <a href="blog/command-line-arguments-for-stattic/index.html" class="text-links hover:underline">Customizing Stattic: Command-Line Arguments for Stattic</a>
             </h2>
-            <div class="dark:text-gray-400"><p>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files,...</p>
+            <div class="dark:text-slate-50 mb-2"><p>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files,...</p>
 </div>
         </li>
         
         <li>
-            <h2 class="text-4xl font-bold quicksand-700">
-                <!-- Updated href to point to index.html within the post directory -->
+            <h2 class="text-4xl mb-2 font-bold quicksand-700">
                 <a href="blog/build-with-stattic-and-deploy-on-github-pages/index.html" class="text-links hover:underline">How to Build and Deploy Your Website with Stattic and GitHub Pages</a>
             </h2>
-            <div class="dark:text-gray-400"><p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a> for free hosting. This guide will walk you through how to create your site, export...</p>
+            <div class="dark:text-slate-50 mb-2"><p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a> for free hosting. This guide will walk you through how to create your site, export...</p>
 </div>
         </li>
         
