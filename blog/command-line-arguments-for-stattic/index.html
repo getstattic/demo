@@ -77,7 +77,7 @@
 </code></pre><p>This command will build your site and save the generated files into the output folder.</p>
 <p>But there's so much more you can do! Let's dive into the different arguments you can use.</p>
 <h2>Using the <code>--minify</code> Flag</h2>
-<p>One of the most useful features of &lt;a href=&quot;/&quot;&gt;Stattic&lt;/a&gt; is the ability to minify all of your CSS and JavaScript files with the <code>--minify</code> flag. This is great for production environments where you want to reduce the file size of your assets for faster page load times.</p>
+<p>One of the most useful features of <a href="/">Stattic</a> is the ability to minify all of your CSS and JavaScript files with the <code>--minify</code> flag. This is great for production environments where you want to reduce the file size of your assets for faster page load times.</p>
 <h3>Example Usage:</h3>
 <pre style="white-space: pre-wrap;"><code>python3 stattic.py --output=output --minify
 </code></pre><p>This will:</p>
@@ -140,47 +140,48 @@
 </ul>
 <h2>Summary of Useful Arguments</h2>
 <p>Here's a quick reference for some of the most useful command-line arguments in Stattic:</p>
-<p>&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Argument&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-      &lt;th&gt;Example Usage&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--output=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Specify the output directory for the generated site.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--output=output&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--minify&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Minify CSS and JS into single files.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--minify&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--fonts=&amp;lt;fonts&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Download and include Google Fonts.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--fonts=&quot;Lato, Montserrat&quot;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--posts-per-page=&amp;lt;num&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Set the number of posts to display per page.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--posts-per-page=10&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--sort-by=&amp;lt;option&amp;gt;&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Sort posts by date, title, or author.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--sort-by=title&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code&gt;--watch&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Watch for file changes and automatically rebuild.&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;--watch&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</p>
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Description</th>
+      <th>Example Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--output=&lt;path&gt;</code></td>
+      <td>Specify the output directory for the generated site.</td>
+      <td><code>--output=output</code></td>
+    </tr>
+    <tr>
+      <td><code>--minify</code></td>
+      <td>Minify CSS and JS into single files.</td>
+      <td><code>--minify</code></td>
+    </tr>
+    <tr>
+      <td><code>--fonts=&lt;fonts&gt;</code></td>
+      <td>Download and include Google Fonts.</td>
+      <td><code>--fonts="Lato, Montserrat"</code></td>
+    </tr>
+    <tr>
+      <td><code>--posts-per-page=&lt;num&gt;</code></td>
+      <td>Set the number of posts to display per page.</td>
+      <td><code>--posts-per-page=10</code></td>
+    </tr>
+    <tr>
+      <td><code>--sort-by=&lt;option&gt;</code></td>
+      <td>Sort posts by date, title, or author.</td>
+      <td><code>--sort-by=title</code></td>
+    </tr>
+    <tr>
+      <td><code>--watch</code></td>
+      <td>Watch for file changes and automatically rebuild.</td>
+      <td><code>--watch</code></td>
+    </tr>
+  </tbody>
+</table>
+
 <h2>Additional Features in Stattic</h2>
 <h3>Logging System</h3>
 <p>Stattic includes a robust logging system that records both INFO and DEBUG level logs. Logs are saved in a <code>/logs</code> folder with a timestamped filename. The logs can help in debugging and monitoring the build process.</p>
