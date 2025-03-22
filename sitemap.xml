@@ -3,7 +3,12 @@
     
     <url>
         <loc>https://demo.stattic.site/</loc>
-        <lastmod>2025-03-21T19:05:23Z</lastmod>
+        <lastmod>2025-03-21T21:33:52Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</loc>
+        <lastmod>2024-09-29T00:00:00Z</lastmod>
     </url>
     
     <url>
@@ -14,11 +19,6 @@
     <url>
         <loc>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</loc>
         <lastmod>2024-09-28T00:00:00Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</loc>
-        <lastmod>2024-09-29T00:00:00Z</lastmod>
     </url>
     
     <url>
@@ -33,12 +33,12 @@
     
     <url>
         <loc>https://demo.stattic.site/about/</loc>
-        <lastmod>2025-03-21T19:05:23Z</lastmod>
+        <lastmod>2025-03-21T21:33:52Z</lastmod>
     </url>
     
     <url>
         <loc>https://demo.stattic.site/contact/</loc>
-        <lastmod>2025-03-21T19:05:23Z</lastmod>
+        <lastmod>2025-03-21T21:33:52Z</lastmod>
     </url>
     
 </urlset>
