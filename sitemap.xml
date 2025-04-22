@@ -3,7 +3,7 @@
     
     <url>
         <loc>https://demo.stattic.site/</loc>
-        <lastmod>2025-04-22T01:51:31Z</lastmod>
+        <lastmod>2025-04-22T01:53:39Z</lastmod>
     </url>
     
     <url>
@@ -22,23 +22,23 @@
     </url>
     
     <url>
-        <loc>https://demo.stattic.site/blog/say-hello-to-stattic/</loc>
-        <lastmod>2024-10-02T00:00:00Z</lastmod>
-    </url>
-    
-    <url>
         <loc>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</loc>
         <lastmod>2024-09-30T00:00:00Z</lastmod>
     </url>
     
     <url>
+        <loc>https://demo.stattic.site/blog/say-hello-to-stattic/</loc>
+        <lastmod>2024-10-02T00:00:00Z</lastmod>
+    </url>
+    
+    <url>
         <loc>https://demo.stattic.site/about/</loc>
-        <lastmod>2025-04-22T01:51:31Z</lastmod>
+        <lastmod>2025-04-22T01:53:39Z</lastmod>
     </url>
     
     <url>
         <loc>https://demo.stattic.site/contact/</loc>
-        <lastmod>2025-04-22T01:51:31Z</lastmod>
+        <lastmod>2025-04-22T01:53:39Z</lastmod>
     </url>
     
 </urlset>
