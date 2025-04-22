@@ -63,13 +63,11 @@
 
 
 <main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
-    <article class="prose dark:prose-dark max-w-none">
+    <article class="prose dark:prose-dark max-w-none stattic-content">
         
         <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">How to Build and Deploy Your Website with Stattic and GitHub Pages</h1>
         <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Sep 28, 2024</span> &middot; <span class="author">Robert</span></p>
-        
-        <div class="stattic-content mb-12">
-            <p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a> for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository, and automate your workflow to push updates live.</p>
+        <p>With Stattic, you can easily build a static site and deploy it to <a href="https://pages.github.com/">GitHub Pages</a> for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository, and automate your workflow to push updates live.</p>
 <h2>Prerequisites</h2>
 <p>Before we start, make sure you have the following:</p>
 <ul>
@@ -95,9 +93,11 @@
 </li>
 <li><p><strong>Run the Build Command</strong></p>
 <p>In your terminal, navigate to your project folder and run:</p>
-<p><code>python3 stattic.py --output ./build --fonts &quot;Quicksand&quot;</code></p>
-<p>This command generates the static files in the <code>./build</code> directory. You can also pass a font list with the <code>--fonts</code>option to use fonts from Google Fonts. If you don't specify a font, it defaults to Quicksand.</p>
-</li>
+<pre style="white-space: pre-wrap;"><code>python3 stattic.py --output ./build --fonts &quot;Quicksand&quot;
+</code></pre><p>This command generates the static files in the <code>./build</code> directory. You can also pass a font list with the <code>--fonts</code>option to use fonts from Google Fonts. If you don't specify a font, it defaults to Quicksand.</p>
+<p>If you're rebuilding, it's a good idea to clear the output directory first:</p>
+<pre style="white-space: pre-wrap;"><code>rm -rf build &amp;&amp; mkdir build
+</code></pre></li>
 </ol>
 <hr />
 <h2>Step 2: Set Up a GitHub Repository</h2>
@@ -105,6 +105,8 @@
 <li><p><strong>Create a New GitHub Repository</strong></p>
 <ul>
 <li>Go to <a href="https://github.com/">GitHub</a> and create a new repository. Name it <code>your-username.github.io</code> if you want to use <a href="https://pages.github.com/">GitHub Pages</a> (replace <code>your-username</code> with your actual GitHub username).</li>
+<li>If you want your site at <code>https://your-username.github.io/</code>, name the repo <code>your-username.github.io</code>.</li>
+<li>For project pages (e.g. <code>your-username.github.io/your-repo-name/</code>), you can name it anything.</li>
 </ul>
 </li>
 <li><p><strong>Clone the Repository Locally</strong> - Open your terminal, navigate to the directory where you want to clone your repository, and run:</p>
@@ -137,14 +139,24 @@
 <hr />
 <h2>Step 5: Enable GitHub Pages</h2>
 <ol>
-<li><p><strong>Configure GitHub Pages</strong> - Go to your GitHub repository, click on the <strong>Settings</strong> tab, then scroll down to <strong>GitHub Pages</strong>.</p>
-<ul>
-<li>Under <strong>Source</strong>, select <code>main</code> as the branch and choose <code>/ (root)</code> as the directory.</li>
-<li>Click <strong>Save</strong>.</li>
+<li><strong>Configure GitHub Pages** - Go to your GitHub repository, click the <strong>Settings** tab, then scroll to the </strong>Pages</strong> section.<ul>
+<li>If you're deploying the build output to the root of your repo, select:<ul>
+<li><strong>Branch</strong>: <code>main</code></li>
+<li><strong>Folder</strong>: <code>/ (root)</code></li>
 </ul>
 </li>
-<li><p><strong>Access Your Site</strong> - After a few minutes, your site will be live at <code>https://your-username.github.io/</code>.</p>
+<li>If you prefer to keep your source files and deploy only the build output:<ul>
+<li>Move the contents of <code>build/</code> into a <code>/docs</code> folder inside the repo.</li>
+<li>Then select:<ul>
+<li><strong>Branch</strong>: <code>main</code></li>
+<li><strong>Folder</strong>: <code>/docs</code></li>
+</ul>
 </li>
+</ul>
+</li>
+</ul>
+Click <strong>Save</strong> when you're done.</li>
+<li><strong>Access Your Site</strong> - After a few minutes, your site will be live at <code>https://your-username.github.io/</code>.</li>
 </ol>
 <hr />
 <h2>Step 6: Automate Future Builds</h2>
@@ -176,7 +188,6 @@ git push origin main
 <hr />
 <h3><strong>Happy Building with Stattic!</strong></h3>
 
-        </div>
     </article>
 </main>
 

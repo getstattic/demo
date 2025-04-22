@@ -63,288 +63,283 @@
 
 
 <main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
-    <article class="prose dark:prose-dark max-w-none">
+    <article class="prose dark:prose-dark max-w-none stattic-content">
         
         <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Customizing Stattic: Front Matter Fields</h1>
         <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Sep 30, 2024</span> &middot; <span class="author">Robert</span></p>
-        
-        <div class="stattic-content mb-12">
-            <h3>1. <strong>title</strong></h3>
+        <p>Below is a comprehensive list of all of the front matter fields that are used by Stattic.</p>
+<h3>1. title</h3>
 <ul>
-<li><p><strong>Description</strong>: The title of your post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String</p>
-</li>
-<li><p><strong>Default</strong>: <code>'Untitled'</code></p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>title: &quot;Your Post Title&quot;</code></p>
-</li>
+<li><strong>Description</strong>: The title of your post or page.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: <code>'Untitled'</code></li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>2. <strong>date</strong></h3>
+<pre style="white-space: pre-wrap;"><code>title: &quot;Your Post Title&quot;`
+</code></pre><h3>2. date</h3>
 <ul>
-<li><p><strong>Description</strong>: The publication date of your post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String (formatted as <code>YYYY-MM-DDTHH:MM:SS</code>)</p>
-</li>
-<li><p><strong>Default</strong>: Current date and time if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>date: &quot;2023-10-15T10:00:00&quot;</code></p>
-</li>
+<li><strong>Description</strong>: The publication date of your post or page.</li>
+<li><strong>Type</strong>: String<br />
+<em>(Accepted formats include <code>YYYY-MM-DDTHH:MM:SS</code>, <code>YYYY-MM-DD</code>, or <code>Mon DD, YYYY</code> (e.g., &quot;Oct 15, 2023&quot;))</em></li>
+<li><strong>Default</strong>: Current date and time if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>3. <strong>author</strong></h3>
+<pre style="white-space: pre-wrap;"><code>date: &quot;2023-10-15T10:00:00&quot;
+</code></pre><h3>3. author</h3>
 <ul>
-<li><p><strong>Description</strong>: The ID of the author of the post or page.</p>
-</li>
-<li><p><strong>Type</strong>: Integer or String (should correspond to an ID in <code>authors.yml</code>)</p>
-</li>
-<li><p><strong>Default</strong>: <code>'Unknown'</code> if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>author: 1  # Assuming '1' corresponds to an author in authors.yml</code></p>
-</li>
+<li><strong>Description</strong>: The ID of the author of the post or page.</li>
+<li><strong>Type<strong>: Integer or String – should correspond to an ID in <code>authors.yml</code>.  
+</strong>Note:</strong> For proper sorting by author, ensure the author field is nested under <code>metadata</code> if your system requires it.</li>
+<li><strong>Default</strong>: <code>'Unknown'</code> if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>4. <strong>categories</strong></h3>
+<pre style="white-space: pre-wrap;"><code>metadata:
+    author: 1  # Corresponds to an author defined in authors.yml
+</code></pre><h3>4. categories</h3>
 <ul>
 <li><strong>Description</strong>: A list of category IDs that the post belongs to.</li>
 <li><strong>Type</strong>: List of Integers (IDs corresponding to entries in <code>categories.yml</code>)</li>
 <li><strong>Default</strong>: Empty list <code>[]</code> if not provided.</li>
 <li><strong>Usage</strong>:</li>
 </ul>
-<pre style="white-space: pre-wrap;"><code>    categories:
-      - 2
-      - 5
-</code></pre><h3>5. <strong>tags</strong></h3>
+<pre style="white-space: pre-wrap;"><code>categories:
+    - 2
+    - 5
+</code></pre><h3>5. tags</h3>
 <ul>
 <li><strong>Description</strong>: A list of tag IDs associated with the post.</li>
 <li><strong>Type</strong>: List of Integers (IDs corresponding to entries in <code>tags.yml</code>)</li>
 <li><strong>Default</strong>: Empty list <code>[]</code> if not provided.</li>
 <li><strong>Usage</strong>:</li>
 </ul>
-<pre style="white-space: pre-wrap;"><code>    tags:
-      - 3
-      - 7
-</code></pre><h3>6. <strong>draft</strong></h3>
+<pre style="white-space: pre-wrap;"><code>tags:
+    - 3
+    - 7
+</code></pre><h3>6. draft</h3>
 <ul>
-<li><p><strong>Description</strong>: Indicates whether the post is a draft.</p>
-</li>
-<li><p><strong>Type</strong>: Boolean (<code>true</code> or <code>false</code>)</p>
-</li>
-<li><p><strong>Default</strong>: <code>false</code> (the post will be published by default)</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>draft: true  # The post will be skipped during the build process</code></p>
-</li>
+<li><strong>Description</strong>: Indicates whether the post is a draft.</li>
+<li><strong>Type</strong>: Boolean (<code>true</code> or <code>false</code>)</li>
+<li><strong>Default</strong>: <code>false</code> (the post will be published by default)</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>7. <strong>template</strong></h3>
+<pre style="white-space: pre-wrap;"><code>draft: true  # The post will be skipped during the build process
+</code></pre><h3>7. template</h3>
 <ul>
-<li><p><strong>Description</strong>: Specifies a custom template to use for rendering.</p>
-</li>
-<li><p><strong>Type</strong>: String (the name of the template part)</p>
-</li>
-<li><p><strong>Default</strong>: <code>'post.html'</code> for posts, <code>'page.html'</code> for pages if not specified.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>template: &quot;custom&quot;  # Will use 'post-custom.html' or 'page-custom.html'</code></p>
-</li>
+<li><strong>Description</strong>: Specifies a custom template to use for rendering.</li>
+<li><strong>Type</strong>: String (the name of the template part)</li>
+<li><strong>Default</strong>: <code>'post.html'</code> for posts, <code>'page.html'</code> for pages if not specified.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>8. <strong>custom_url</strong></h3>
+<pre style="white-space: pre-wrap;"><code>template: &quot;custom&quot;  # Will use 'post-custom.html' or 'page-custom.html'
+</code></pre><h3>8. custom_url</h3>
 <ul>
-<li><p><strong>Description</strong>: Custom URL slug for the post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String</p>
-</li>
-<li><p><strong>Default</strong>: The filename without the <code>.md</code> extension.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>custom_url: &quot;my-custom-path&quot;</code></p>
-</li>
+<li><strong>Description</strong>: Custom URL slug for the post or page.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: The filename without the <code>.md</code> extension.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>9. <strong>order</strong></h3>
+<pre style="white-space: pre-wrap;"><code>custom_url: &quot;my-custom-path&quot;
+</code></pre><h3>9. order</h3>
 <ul>
-<li><p><strong>Description</strong>: Determines the order of pages in navigation menus.</p>
-</li>
-<li><p><strong>Type</strong>: Integer (lower numbers appear first)</p>
-</li>
-<li><p><strong>Default</strong>: <code>100</code> if not specified.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>order: 1  # This page will appear before pages with higher 'order' values</code></p>
-</li>
+<li><strong>Description<strong>: Intended to determine the order of pages in navigation menus.  
+</strong>Note:</strong> Currently, post sorting is based on the <code>--sort-by</code> option (date, title, or author). The <code>order</code> field is available for use by custom templates or additional logic.</li>
+<li><strong>Type</strong>: Integer (lower numbers appear first)</li>
+<li><strong>Default</strong>: <code>100</code> if not specified.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>10. <strong>featured_image</strong></h3>
+<pre style="white-space: pre-wrap;"><code>order: 1  # Used by custom logic for navigation ordering
+</code></pre><h3>10. featured_image</h3>
 <ul>
-<li><p><strong>Description</strong>: URL of the featured image for the post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String (URL)</p>
-</li>
-<li><p><strong>Default</strong>: <code>None</code> if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>featured_image: &quot;https://example.com/images/featured.jpg&quot;</code></p>
-</li>
+<li><strong>Description</strong>: URL of the featured image for the post or page.</li>
+<li><strong>Type</strong>: String (URL)</li>
+<li><strong>Default</strong>: <code>None</code> if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>11. <strong>seo_title</strong></h3>
+<pre style="white-space: pre-wrap;"><code>featured_image: &quot;https://example.com/images/featured.jpg&quot;
+</code></pre><h3>11. seo_title</h3>
 <ul>
-<li><p><strong>Description</strong>: Custom title for SEO purposes.</p>
-</li>
-<li><p><strong>Type</strong>: String</p>
-</li>
-<li><p><strong>Default</strong>: Uses the <code>title</code> field if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>seo_title: &quot;Optimized SEO Title for Search Engines&quot;</code></p>
-</li>
+<li><strong>Description</strong>: Custom title for SEO purposes.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: Uses the <code>title</code> field if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>12. <strong>keywords</strong></h3>
+<pre style="white-space: pre-wrap;"><code>seo_title: &quot;Optimized SEO Title for Search Engines&quot;
+</code></pre><h3>12. keywords</h3>
 <ul>
-<li><p><strong>Description</strong>: SEO keywords for the post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String (comma-separated)</p>
-</li>
-<li><p><strong>Default</strong>: Empty string <code>''</code> if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>keywords: &quot;keyword1, keyword2, keyword3&quot;</code></p>
-</li>
+<li><strong>Description</strong>: SEO keywords for the post or page.</li>
+<li><strong>Type</strong>: String (comma-separated)</li>
+<li><strong>Default</strong>: Empty string <code>''</code> if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>13. <strong>description</strong></h3>
+<pre style="white-space: pre-wrap;"><code>keywords: &quot;keyword1, keyword2, keyword3&quot;
+</code></pre><h3>13. description</h3>
 <ul>
-<li><p><strong>Description</strong>: SEO description for the post or page.</p>
-</li>
-<li><p><strong>Type</strong>: String</p>
-</li>
-<li><p><strong>Default</strong>: Empty string <code>''</code> if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>description: &quot;A brief description of the content for SEO purposes.&quot;</code></p>
-</li>
+<li><strong>Description</strong>: SEO description for the post or page.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: Empty string <code>''</code> if not provided.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>14. <strong>lang</strong></h3>
+<pre style="white-space: pre-wrap;"><code>description: &quot;A brief description of the content for SEO purposes.&quot;
+</code></pre><h3>14. lang</h3>
 <ul>
-<li><p><strong>Description</strong>: Language code for the content.</p>
-</li>
-<li><p><strong>Type</strong>: String (e.g., <code>'en'</code>, <code>'fr'</code>, <code>'es'</code>)</p>
-</li>
-<li><p><strong>Default</strong>: <code>'en'</code> (English) if not specified.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>lang: &quot;en&quot;</code></p>
-</li>
+<li><strong>Description</strong>: Language code for the content.</li>
+<li><strong>Type</strong>: String (e.g., <code>'en'</code>, <code>'fr'</code>, <code>'es'</code>)</li>
+<li><strong>Default</strong>: <code>'en'</code> (English) if not specified.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3>15. <strong>excerpt</strong></h3>
+<pre style="white-space: pre-wrap;"><code>lang: &quot;en&quot;
+</code></pre><h3>15. excerpt</h3>
 <ul>
-<li><p><strong>Description</strong>: Custom excerpt or summary of the post.</p>
-</li>
-<li><p><strong>Type</strong>: String (supports Markdown)</p>
-</li>
-<li><p><strong>Default</strong>: Automatically generated from the first 30 words of the content if not provided.</p>
-</li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>excerpt: &quot;This is a custom excerpt for the post.&quot;</code></p>
-</li>
+<li><strong>Description<strong>: Custom excerpt or summary of the post. Supports Markdown.  
+</strong>Note:</strong> If not provided, an excerpt is automatically generated (typically from the first 30 words) unless overridden.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: Automatically generated from the content or defaults to <code>&quot;No description available&quot;</code> in RSS feeds.</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<hr />
-<h2>Additional Details and Usage</h2>
+<pre style="white-space: pre-wrap;"><code>excerpt: &quot;This is a custom excerpt for the post.&quot;
+</code></pre><h3>16. permalink</h3>
+<ul>
+<li><strong>Description</strong>: The URL slug for the post or page, used to generate absolute URLs for feeds and sitemaps.</li>
+<li><strong>Type</strong>: String</li>
+<li><strong>Default</strong>: Derived from <code>custom_url</code> if provided, or from the filename (without the <code>.md</code> extension).</li>
+<li><strong>Usage</strong>:</li>
+</ul>
+<pre style="white-space: pre-wrap;"><code>permalink: &quot;exploring-the-stars&quot;
+</code></pre><h2>Additional Details and Usage</h2>
 <h3><strong>Categories and Tags</strong></h3>
 <ul>
 <li><strong>Definition Files</strong>: Categories and tags are defined in <code>categories.yml</code> and <code>tags.yml</code>, respectively.</li>
 <li><strong>Structure of YAML Files</strong>:</li>
 </ul>
-<pre style="white-space: pre-wrap;"><code>    # categories.yml
-    1:
-      name: &quot;Technology&quot;
-    2:
-      name: &quot;Science&quot;
-    
-    # tags.yml
-    1:
-      name: &quot;Python&quot;
-    2:
-      name: &quot;AI&quot;
+<pre style="white-space: pre-wrap;"><code># categories.yml
+1:
+    name: &quot;Technology&quot;
+2:
+    name: &quot;Science&quot;
+
+# tags.yml
+1:
+    name: &quot;Python&quot;
+2:
+    name: &quot;AI&quot;
 </code></pre><ul>
 <li><strong>Usage in Front Matter</strong>:</li>
 </ul>
-<pre style="white-space: pre-wrap;"><code>    categories:
-      - 1  # Refers to &quot;Technology&quot;
-      - 2  # Refers to &quot;Science&quot;
-    tags:
-      - 1  # Refers to &quot;Python&quot;
-      - 2  # Refers to &quot;AI&quot;
+<pre style="white-space: pre-wrap;"><code>categories:
+    - 1  # Refers to &quot;Technology&quot;
+    - 2  # Refers to &quot;Science&quot;
+tags:
+    - 1  # Refers to &quot;Python&quot;
+    - 2  # Refers to &quot;AI&quot;
 </code></pre><h3><strong>Authors</strong></h3>
 <ul>
 <li><strong>Definition File</strong>: Authors are defined in <code>authors.yml</code>.</li>
 <li><strong>Structure</strong>:</li>
 </ul>
-<pre style="white-space: pre-wrap;"><code>    # authors.yml
-    1: &quot;Jane Doe&quot;
-    2: &quot;John Smith&quot;
+<pre style="white-space: pre-wrap;"><code># authors.yml
+1: &quot;Jane Doe&quot;
+2: &quot;John Smith&quot;
 </code></pre><ul>
-<li><p><strong>Usage in Front Matter</strong>:</p>
-<p><code>author: 1  # Refers to &quot;Jane Doe&quot;</code></p>
-</li>
+<li><strong>Usage in Front Matter</strong>:</li>
 </ul>
-<h3><strong>Custom Templates</strong></h3>
+<pre style="white-space: pre-wrap;"><code>author: 1  # Refers to &quot;Jane Doe&quot;
+</code></pre><h3><strong>Custom Templates</strong></h3>
 <ul>
-<li><p><strong>Templates Directory</strong>: Templates are stored in the <code>templates</code> directory.</p>
-</li>
-<li><p><strong>Template Naming</strong>:</p>
-<ul>
+<li><strong>Templates Directory</strong>: Templates are stored in the <code>templates</code> directory.</li>
+<li><strong>Template Naming</strong>:<ul>
 <li>For posts: <code>post.html</code> or <code>post-{template}.html</code></li>
 <li>For pages: <code>page.html</code> or <code>page-{template}.html</code></li>
 </ul>
 </li>
-<li><p><strong>Usage</strong>:</p>
-<p><code>template: &quot;gallery&quot;  # Will use 'post-gallery.html' or 'page-gallery.html'</code></p>
-</li>
+<li><strong>Usage</strong>:</li>
 </ul>
-<h3><strong>Example of Complete Front Matter</strong></h3>
-<pre style="white-space: pre-wrap;"><code>    ---
-    title: &quot;Exploring the Stars&quot;
-    date: &quot;2023-10-15T10:00:00&quot;
-    author: 2
-    categories:
-      - 3
-      - 4
-    tags:
-      - 5
-      - 6
-    draft: false
-    template: &quot;astronomy&quot;
-    custom_url: &quot;exploring-the-stars&quot;
-    order: 2
-    featured_image: &quot;https://example.com/images/stars.jpg&quot;
-    seo_title: &quot;A Deep Dive into Astronomy&quot;
-    keywords: &quot;astronomy, stars, space&quot;
-    description: &quot;An in-depth exploration of the wonders of the universe.&quot;
-    lang: &quot;en&quot;
-    excerpt: &quot;Join us as we journey through the cosmos, exploring the mysteries of the stars...&quot;
-    ---
+<pre style="white-space: pre-wrap;"><code>template: &quot;gallery&quot;  # Will use 'post-gallery.html' or 'page-gallery.html'
+</code></pre><h3><strong>Example of Complete Front Matter</strong></h3>
+<pre style="white-space: pre-wrap;"><code>---
+title: &quot;Exploring the Stars&quot;
+date: &quot;2023-10-15T10:00:00&quot;
+author: 2
+categories:
+    - 3
+    - 4
+tags:
+    - 5
+    - 6
+draft: false
+template: &quot;astronomy&quot;
+custom_url: &quot;exploring-the-stars&quot;
+order: 2
+featured_image: &quot;https://example.com/images/stars.jpg&quot;
+seo_title: &quot;A Deep Dive into Astronomy&quot;
+keywords: &quot;astronomy, stars, space&quot;
+description: &quot;An in-depth exploration of the wonders of the universe.&quot;
+lang: &quot;en&quot;
+excerpt: &quot;Join us as we journey through the cosmos, exploring the mysteries of the stars...&quot;
+---
 </code></pre><hr />
 <h2>Notes on Usage</h2>
 <ul>
-<li><strong>Front Matter Format</strong>: Ensure the front matter is enclosed at the top of your Markdown file between <code>---</code> lines.</li>
-<li><strong>YAML Syntax</strong>: Use proper YAML syntax to avoid parsing errors. Indentation and formatting are important.</li>
-<li><strong>Optional Fields</strong>: All fields are optional unless required by your site's design or functionality. The script provides default values where appropriate.</li>
+<li><strong>Front Matter Format</strong>: Always place your front matter at the top of your Markdown file, enclosed between <code>---</code> lines.</li>
+</ul>
+<p>Example:</p>
+<pre style="white-space: pre-wrap;"><code>---
+title: &quot;My Post Title&quot;
+date: &quot;2024-04-22&quot;
+---
+</code></pre><ul>
+<li><strong>YAML Syntax</strong>: Use proper YAML formatting. Watch for:<ul>
+<li>Correct indentation (2 spaces is standard)</li>
+<li>No tab characters</li>
+<li>String values with special characters (like <code>:</code>) should be quoted</li>
+</ul>
+</li>
+<li><strong>Optional Fields</strong>: All fields are optional unless required by your site's design or templates.</li>
+</ul>
+<p>Default values are applied automatically if a field is missing.</p>
+<ul>
+<li><strong>Date Formats</strong>: Dates can be written in any of the following formats:<ul>
+<li><code>YYYY-MM-DDTHH:MM:SS</code> (recommended)</li>
+<li><code>YYYY-MM-DD</code></li>
+<li><code>Apr 22, 2025</code></li>
+</ul>
+</li>
+</ul>
+<p>If the date is invalid or missing, a default fallback will be used (e.g., the current date or minimum sort date).</p>
+<ul>
 <li><strong>Draft Posts</strong>:<ul>
-<li>Set <code>draft: true</code> to exclude a post from the build.</li>
-<li>Remove the <code>draft</code> field or set it to <code>false</code> when you're ready to publish.</li>
+<li>Use <code>draft: true</code> to prevent a post from being built.</li>
+<li>When ready to publish, set <code>draft: false</code> or remove the line entirely.</li>
 </ul>
 </li>
 <li><strong>Custom URLs</strong>:<ul>
-<li>Use <code>custom_url</code> to define a specific path for your post or page.</li>
-<li>If not specified, the filename (without the <code>.md</code> extension) is used as the slug.</li>
+<li>Use <code>custom_url</code> to control the output slug and permalink.</li>
+<li>If omitted, the filename (without <code>.md</code>) will be used as the URL.</li>
+<li>Internally, this field maps to <code>permalink</code> in feeds and sitemaps.</li>
+</ul>
+</li>
+<li><strong>Excerpt Behavior</strong>:<ul>
+<li>If <code>excerpt</code> is provided in the front matter, it will be used.</li>
+<li>If omitted, an automatic excerpt is generated from the first 30 words of the post.</li>
+</ul>
+</li>
+<li><strong>Image Handling</strong>:<ul>
+<li>Local and remote images used in content or <code>featured_image</code> are downloaded and converted to WebP.</li>
+<li>All image references (<code>src</code>, <code>href</code>, <code>srcset</code>, and Markdown syntax) are automatically updated.</li>
 </ul>
 </li>
 </ul>
-<hr />
 <h2>Summary</h2>
-<p>By utilizing these front matter fields, you can control various aspects of how your content is processed and displayed by the <strong>Stattic</strong> static site generator.</p>
-<p>This includes metadata for SEO, content organization through categories and tags, custom templates for different types of content, and more.</p>
-<p>Feel free to include any or all of these fields in the front matter of your Markdown files to customize your site's behavior and appearance according to your needs.</p>
+<p>By defining values in your Markdown file's front matter, you gain fine-grained control over how content is handled, presented, and optimized by <strong>Stattic</strong>.</p>
+<p>Whether you're managing SEO, structuring navigation, hiding drafts, or linking to custom permalinks, front matter fields let you customize:</p>
+<ul>
+<li>Meta details like <code>seo_title</code>, <code>keywords</code>, <code>description</code></li>
+<li>Layout via <code>template</code></li>
+<li>Content organization using <code>categories</code> and <code>tags</code></li>
+<li>Author attribution with <code>author</code></li>
+<li>Media presentation with <code>featured_image</code> and automatic excerpting</li>
+</ul>
+<p>You can include as few or as many of these fields as needed. Stattic will fill in any gaps with sensible defaults--so your content builds fast, clean, and reliably.</p>
 
-        </div>
     </article>
 </main>
 

@@ -63,19 +63,22 @@
 
 
 <main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
-    <article class="prose dark:prose-dark max-w-none">
+    <article class="prose dark:prose-dark max-w-none stattic-content">
         
         <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Decentralizing Publishing with Stattic</h1>
-        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Oct 01, 2024</span> &middot; <span class="author">Robert</span></p>
-        
-        <div class="stattic-content mb-12">
-            <p>When control over content and website creation is increasingly centralized under unstable power, there's a growing need for tools that empower the community to publish independently.</p>
-<p><strong>Stattic</strong> is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator community where it belongs.</p>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Apr 21, 2025</span> &middot; <span class="author">Robert</span></p>
+        <p><strong>Stattic</strong> is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator community where it belongs.</p>
 <h2>Key Features of Stattic</h2>
 <p>The following list is in no particular order and will be changing as Stattic continues to grow with user needs in mind.</p>
-<h3>1. Markdown Support</h3>
+<h3>1. Markdown with Enhanced Features</h3>
 <p>Stattic uses Markdown for content creation, allowing you to write posts and pages in a straightforward and readable format.</p>
-<p>It employs the Mistune library to convert Markdown to HTML efficiently, supporting features like tables, task lists, and strikethrough text.</p>
+<p>Stattic uses <a href="https://mistune.readthedocs.io/en/latest/">Mistune</a> with a <strong>custom renderer</strong> that supports:</p>
+<ul>
+<li>Tables</li>
+<li>Task lists</li>
+<li>Strikethrough</li>
+<li>Smart code block rendering with automatic HTML escaping</li>
+</ul>
 <h3>2. Template Rendering with Jinja2</h3>
 <p>The generator utilizes Jinja2 templates for rendering HTML pages.</p>
 <p>This separation of content and presentation ensures flexibility and ease of maintenance, allowing you to customize the look and feel of your site without altering the content.</p>
@@ -114,6 +117,20 @@
 <p>Pages are loaded and sorted based on an 'order' value in their metadata, allowing you to customize the navigation structure of your site.</p>
 <p>In the front matter it's as simple as adding one word and one number.</p>
 <p><strong>Example:</strong> <code>order: 5</code></p>
+<h3>13. RSS Feed and Sitemap Generation</h3>
+<p>If you provide a <code>--site-url</code>, Stattic will:</p>
+<ul>
+<li>Generate a valid RSS 2.0 feed at <code>/feed/index.xml</code></li>
+<li>Output a complete <code>/sitemap.xml</code> with last-modified timestamps</li>
+<li>Escape and normalize all URLs and metadata</li>
+</ul>
+<p><strong>Example:</strong> <code>--site-url https://stattic.site/</code></p>
+<h3>14. 404 Page and robots.txt</h3>
+<p>Stattic builds a default <code>404.html</code> using your template and content. You can customize it like any other page.</p>
+<p>It also generates a <code>robots.txt</code> file based on the mode you choose:</p>
+<pre style="white-space: pre-wrap;"><code>--robots public   # allow indexing
+--robots private  # block all bots
+</code></pre><p>If <code>--site-url</code> is provided, the <code>robots.txt</code> will automatically include a <code>Sitemap:</code> line pointing to your <code>/sitemap.xml</code>.</p>
 <h2>Getting Started with Stattic</h2>
 <ol>
 <li><p><strong>Organize Your Content</strong>: Place your Markdown files in the <code>content/posts</code> and <code>content/pages</code> directories.</p>
@@ -128,12 +145,12 @@
 <li><strong>Review the Output</strong>: Your static site will be generated in the specified output directory, ready to be deployed to any static hosting service of your choice.</li>
 </ol>
 <h2>Decentralized Publishing for the People</h2>
-<p><strong>Stattic</strong> is a bullshit free tool that empowers you to publish content on your own terms.</p>
-<p>By simplifying static site generation and efficiently handling assets, it supports the movement toward decentralizing publishing. Whether you're a developer or a content creator, Stattic offers a minimalistic yet powerful solution for building your online presence.</p>
-<p>Feel free to contribute to the project on <a href="https://github.com/getstattic/stattic">GitHub</a> or customize it to suit your specific needs. The project is covered under the MIT license which is also included in the GitHub repository.</p>
-<p>Together, we can promote a more decentralized and independent web 🤘</p>
+<p><strong>Stattic</strong> doesn’t ask permission. It gives it back.</p>
+<p>No CMS, plugins or middlemen necessary. Just clean, fast publishing on your own terms terms. With full control over your content, your design, and your future.</p>
+<p>Whether you're a developer, writer, artist, or creative misfit, Stattic is your toolkit for building an independent web presence without the noise.</p>
+<p>It's open source. It's MIT licensed. And it's built to be forked, remixed, and made yours.</p>
+<p>Contribute on <a href="https://github.com/getstattic/stattic">GitHub</a>, build something great, and help take the web back — one static site at a time.</p>
 
-        </div>
     </article>
 </main>
 
