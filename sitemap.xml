@@ -3,12 +3,7 @@
     
     <url>
         <loc>https://demo.stattic.site/</loc>
-        <lastmod>2025-05-14T18:18:12Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</loc>
-        <lastmod>2025-04-22T00:00:00Z</lastmod>
+        <lastmod>2025-05-14T18:25:49Z</lastmod>
     </url>
     
     <url>
@@ -17,7 +12,7 @@
     </url>
     
     <url>
-        <loc>https://demo.stattic.site/blog/say-hello-to-stattic/</loc>
+        <loc>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</loc>
         <lastmod>2025-04-22T00:00:00Z</lastmod>
     </url>
     
@@ -32,13 +27,18 @@
     </url>
     
     <url>
+        <loc>https://demo.stattic.site/blog/say-hello-to-stattic/</loc>
+        <lastmod>2025-04-22T00:00:00Z</lastmod>
+    </url>
+    
+    <url>
         <loc>https://demo.stattic.site/about/</loc>
-        <lastmod>2025-05-14T18:18:12Z</lastmod>
+        <lastmod>2025-05-14T18:25:49Z</lastmod>
     </url>
     
     <url>
         <loc>https://demo.stattic.site/contact/</loc>
-        <lastmod>2025-05-14T18:18:12Z</lastmod>
+        <lastmod>2025-05-14T18:25:49Z</lastmod>
     </url>
     
 </urlset>
