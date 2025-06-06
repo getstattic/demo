@@ -3,15 +3,15 @@
 This site contains structured content formatted for LLM-friendly consumption.
 
 ## Posts
-- [Customizing Stattic: Command-Line Arguments for Stattic](https://demo.stattic.site/blog/command-line-arguments-for-stattic/): ID 3943674317
-- [Decentralizing Publishing with Stattic](https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/): ID 371614919
-- [How to Build and Deploy Your Website with Stattic and GitHub Pages](https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/): ID 3537356557
-- [Customizing Stattic: Front Matter Fields](https://demo.stattic.site/blog/front-matter-fields-for-stattic/): ID 6654829815
-- [Say Hello to Stattic](https://demo.stattic.site/blog/say-hello-to-stattic/): ID 1055400413
+- [Customizing Stattic: Command-Line Arguments for Stattic](https://demo.stattic.site/blog/command-line-arguments-for-stattic/): ID 6498766938
+- [Decentralizing Publishing with Stattic](https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/): ID 7724921249
+- [How to Build and Deploy Your Website with Stattic and GitHub Pages](https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/): ID 8288659668
+- [Customizing Stattic: Front Matter Fields](https://demo.stattic.site/blog/front-matter-fields-for-stattic/): ID 6243705859
+- [Say Hello to Stattic](https://demo.stattic.site/blog/say-hello-to-stattic/): ID 6859453614
 
 ## Pages
-- [Contact Us](https://demo.stattic.site/contact/): ID 7410292964
-- [About Stattic](https://demo.stattic.site/about/): ID 850929994
+- [Contact Us](https://demo.stattic.site/contact/): ID 5831822653
+- [About Stattic](https://demo.stattic.site/about/): ID 2842720436
 
 ## Sitemap
 https://demo.stattic.site/sitemap.xml
