@@ -1,57 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
 <channel>
 <title>demo.stattic.site</title>
-<link>https://demo.stattic.site/</link>
+<link>https://demo.stattic.site</link>
 <description>Latest posts from demo.stattic.site</description>
-<atom:link href="https://demo.stattic.site/feed/index.xml" rel="self" type="application/rss+xml" />
-<lastBuildDate>Sun, 18 May 2025 05:11:31 GMT</lastBuildDate>
-<language>en-us</language>
+<lastBuildDate>Fri, 06 Jun 2025 15:22:52 -0000</lastBuildDate>
 
 <item>
-<title>Customizing Stattic: Command-Line Arguments for Stattic - demo.stattic.site</title>
+<title>Customizing Stattic: Command-Line Arguments for Stattic</title>
 <link>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</link>
-<description>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files,...
-</description>
-<guid isPermaLink="false">4dba6e3f3cdb7551df5988d0b8447b67</guid>
-<pubDate>Sun, 18 May 2025 01:11:31 +0000</pubDate>
+<description>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files, choose fonts, cha</description>
+<pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
+<guid>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</guid>
 </item>
-
 <item>
-<title>Decentralizing Publishing with Stattic - demo.stattic.site</title>
+<title>Decentralizing Publishing with Stattic</title>
 <link>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</link>
-<description>Stattic is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator...
-</description>
-<guid isPermaLink="false">7ed4c00762c74a4a1ac20195fdf221fb</guid>
-<pubDate>Sun, 18 May 2025 01:11:31 +0000</pubDate>
+<description>Stattic is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator c</description>
+<pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
+<guid>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</guid>
 </item>
-
 <item>
-<title>How to Build and Deploy Your Website with Stattic and GitHub Pages - demo.stattic.site</title>
+<title>How to Build and Deploy Your Website with Stattic and GitHub Pages</title>
 <link>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</link>
-<description>With Stattic, you can easily build a static site and deploy it to GitHub Pages for free hosting. This guide will walk you through how to create your site, export...
-</description>
-<guid isPermaLink="false">2e6d015774e0fbac652fe13bcfa9bbca</guid>
-<pubDate>Sun, 18 May 2025 01:11:31 +0000</pubDate>
+<description>With Stattic, you can easily build a static site and deploy it to GitHub Pages for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository</description>
+<pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
+<guid>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</guid>
 </item>
-
 <item>
-<title>Customizing Stattic: Front Matter Fields - demo.stattic.site</title>
+<title>Customizing Stattic: Front Matter Fields</title>
 <link>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</link>
-<description>Below is a comprehensive list of all of the front matter fields that are used by Stattic. ### 1. title - Description: The title of your post or page. -...
-</description>
-<guid isPermaLink="false">953a4a2ea122dfa6853c9fa0e5bc733e</guid>
-<pubDate>Sun, 18 May 2025 01:11:31 +0000</pubDate>
-</item>
+<description>Below is a comprehensive list of all of the front matter fields that are used by Stattic.
+1. title
 
+Description: The title of your post or page.
+Type: String
+Default: 'Untitled'
+Usage:
+
+title: "Your P</description>
+<pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
+<guid>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</guid>
+</item>
 <item>
-<title>Say Hello to Stattic - demo.stattic.site</title>
+<title>Say Hello to Stattic</title>
 <link>https://demo.stattic.site/blog/say-hello-to-stattic/</link>
-<description>Welcome to Stattic, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've...
-</description>
-<guid isPermaLink="false">82f78c83cabcc44391683ab9447aac0b</guid>
-<pubDate>Sun, 18 May 2025 01:11:31 +0000</pubDate>
+<description>Welcome to Stattic, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them.
+If you'</description>
+<pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
+<guid>https://demo.stattic.site/blog/say-hello-to-stattic/</guid>
 </item>
-
 </channel>
 </rss>
