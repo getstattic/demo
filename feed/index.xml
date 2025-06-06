@@ -4,49 +4,40 @@
 <title>demo.stattic.site</title>
 <link>https://demo.stattic.site</link>
 <description>Latest posts from demo.stattic.site</description>
-<lastBuildDate>Fri, 06 Jun 2025 15:22:52 -0000</lastBuildDate>
+<lastBuildDate>Fri, 06 Jun 2025 15:29:07 -0000</lastBuildDate>
 
 <item>
 <title>Customizing Stattic: Command-Line Arguments for Stattic</title>
 <link>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</link>
-<description>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files, choose fonts, cha</description>
+<description>Stattic is a flexible static site generator that lets you customize the way your site is built through a variety of command-line arguments. These arguments allow you to minify files, choose fonts, change the number of posts per page, and more. In this post, we'll go through some of the...</description>
 <pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
 <guid>https://demo.stattic.site/blog/command-line-arguments-for-stattic/</guid>
 </item>
 <item>
 <title>Decentralizing Publishing with Stattic</title>
 <link>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</link>
-<description>Stattic is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator c</description>
+<description>Stattic is an open source Python-based static site generator designed to simplify website creation and support the decentralization of publishing, giving the power back into the hands of the creator community where it belongs. Key Features of Stattic The following list is in no particular order and will be changing...</description>
 <pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
 <guid>https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/</guid>
 </item>
 <item>
 <title>How to Build and Deploy Your Website with Stattic and GitHub Pages</title>
 <link>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</link>
-<description>With Stattic, you can easily build a static site and deploy it to GitHub Pages for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository</description>
+<description>With Stattic, you can easily build a static site and deploy it to GitHub Pages for free hosting. This guide will walk you through how to create your site, export the build files to a GitHub repository, and automate your workflow to push updates live. Prerequisites Before we start, make...</description>
 <pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
 <guid>https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/</guid>
 </item>
 <item>
 <title>Customizing Stattic: Front Matter Fields</title>
 <link>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</link>
-<description>Below is a comprehensive list of all of the front matter fields that are used by Stattic.
-1. title
-
-Description: The title of your post or page.
-Type: String
-Default: 'Untitled'
-Usage:
-
-title: "Your P</description>
+<description>Below is a comprehensive list of all of the front matter fields that are used by Stattic. 1. title Description: The title of your post or page. Type: String Default: 'Untitled' Usage: title: "Your Post Title"` 2. date Description: The publication date of your post or page. Type: String (Accepted...</description>
 <pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
 <guid>https://demo.stattic.site/blog/front-matter-fields-for-stattic/</guid>
 </item>
 <item>
 <title>Say Hello to Stattic</title>
 <link>https://demo.stattic.site/blog/say-hello-to-stattic/</link>
-<description>Welcome to Stattic, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them.
-If you'</description>
+<description>Welcome to Stattic, the lightweight, modern, static site generator that's decentralizing publishing and putting the power to create websites back into the hands of the community creating them. If you've ever been frustrated with the sluggishness, archaic architecture and endless database queries of traditional content management systems, then Stattic is...</description>
 <pubDate>Tue, 22 Apr 2025 04:00:00 -0000</pubDate>
 <guid>https://demo.stattic.site/blog/say-hello-to-stattic/</guid>
 </item>
