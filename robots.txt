@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://demo.stattic.site/sitemap.xml
+Sitemap: https://example.com/sitemap.xml

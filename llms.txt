@@ -1,17 +1,17 @@
-# demo.stattic.site - a Python-based static site generator's demo website
+# My Static Site - a Python-based static site generator's demo website
 
 This site contains structured content formatted for LLM-friendly consumption.
 
 ## Posts
-- [Customizing Stattic: Command-Line Arguments for Stattic](https://demo.stattic.site/blog/command-line-arguments-for-stattic/): ID 1917216002
-- [Decentralizing Publishing with Stattic](https://demo.stattic.site/blog/decentralizing-publishing-with-stattic/): ID 252629268
-- [How to Build and Deploy Your Website with Stattic and GitHub Pages](https://demo.stattic.site/blog/build-with-stattic-and-deploy-on-github-pages/): ID 8785681329
-- [Customizing Stattic: Front Matter Fields](https://demo.stattic.site/blog/front-matter-fields-for-stattic/): ID 30329979
-- [Say Hello to Stattic](https://demo.stattic.site/blog/say-hello-to-stattic/): ID 1897014714
+- [Customizing Stattic: Command-Line Arguments for Stattic](https://example.com/blog/command-line-arguments-for-stattic/): ID 4480639486
+- [Decentralizing Publishing with Stattic](https://example.com/blog/decentralizing-publishing-with-stattic/): ID 7397595994
+- [How to Build and Deploy Your Website with Stattic and GitHub Pages](https://example.com/blog/build-with-stattic-and-deploy-on-github-pages/): ID 4251838338
+- [Customizing Stattic: Front Matter Fields](https://example.com/blog/front-matter-fields-for-stattic/): ID 2850132332
+- [Say Hello to Stattic](https://example.com/blog/say-hello-to-stattic/): ID 7191048093
 
 ## Pages
-- [Contact Us](https://demo.stattic.site/contact/): ID 5039039824
-- [About Stattic](https://demo.stattic.site/about/): ID 5900211324
+- [Contact Us](https://example.com/contact/): ID 3566167399
+- [About Stattic](https://example.com/about/): ID 3267008250
 
 ## Sitemap
-https://demo.stattic.site/sitemap.xml
+https://example.com/sitemap.xml
